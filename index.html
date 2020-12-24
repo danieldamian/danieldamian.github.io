@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title>Daniel Damian</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PWA</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     </head>
     <body>
-        <center>
-            <h1>Daniel Damian</h1>
-            <h3>Student/Developer</h3>
-        </center>
-        <hr />
-
+        <div id="app">Hello World</div>
+        <p>teste</p>
+        <noscript>
+            <p>Por favor, habilite o JavaScript em seu navegador!</p>
+        </noscript>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js')
+                    .then(function () {
+                    console.log('service worker registrado');
+                    })
+                    .catch(function () {
+                    console.warn('service worker falha');
+                    });
+            }
+        </script>
     </body>
 </html>
