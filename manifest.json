@@ -1,0 +1,8 @@
+{
+    "name": "Meu App - Teste",
+    "short_name": "Teste",
+    "theme_color": "#2a0044",
+    "background_color": "#2a0044",
+    "display": "standalone",
+    "start_url": "."
+}
